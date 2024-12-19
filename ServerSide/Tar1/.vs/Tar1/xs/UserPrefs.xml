@@ -1,0 +1,44 @@
+﻿<Properties StartupConfiguration="{AB120DB2-618E-4773-8774-963103BAC4B1}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Tar1 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Tar1/Controllers/CastController.cs">
+    <Files>
+      <File FileName="Tar1/Controllers/UserController.cs" />
+      <File FileName="Tar1/DAL/DBService.cs" Line="13" Column="1" />
+      <File FileName="Tar1/BL/User.cs" />
+      <File FileName="Tar1/appsettings.json" />
+      <File FileName="Tar1/Controllers/CastController.cs" Line="56" Column="1" />
+      <File FileName="Tar1/BL/Cast.cs" Line="22" Column="35" />
+      <File FileName="Tar1/BL/Movie.cs" />
+      <File FileName="Tar1/Program.cs" />
+      <File FileName="Tar1/Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="Tar1/appsettings.Development.json" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Tar1" expanded="True">
+            <Node name="Tar1" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="BL" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="CastController.cs" selected="True" />
+              </Node>
+              <Node name="DAL" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

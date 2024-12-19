@@ -1,0 +1,17 @@
+/Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Release/net6.0/publish/Tar1
+/Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Release/net6.0/publish/appsettings.Development.json
+/Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Release/net6.0/publish/appsettings.json
+/Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Release/net6.0/publish/Tar1.dll
+/Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Release/net6.0/publish/Tar1.deps.json
+/Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Release/net6.0/publish/Tar1.runtimeconfig.json
+/Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Release/net6.0/publish/Tar1.pdb
+/Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Release/net6.0/publish/Microsoft.OpenApi.dll
+/Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Release/net6.0/publish/Swashbuckle.AspNetCore.Swagger.dll
+/Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Release/net6.0/publish/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Release/net6.0/publish/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Release/net6.0/publish/System.Data.SqlClient.dll
+/Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Release/net6.0/publish/runtimes/win-arm64/native/sni.dll
+/Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Release/net6.0/publish/runtimes/win-x64/native/sni.dll
+/Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Release/net6.0/publish/runtimes/win-x86/native/sni.dll
+/Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Release/net6.0/publish/runtimes/unix/lib/net6.0/System.Data.SqlClient.dll
+/Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Release/net6.0/publish/runtimes/win/lib/net6.0/System.Data.SqlClient.dll

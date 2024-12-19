@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Tar1.props" />
+</Project>
