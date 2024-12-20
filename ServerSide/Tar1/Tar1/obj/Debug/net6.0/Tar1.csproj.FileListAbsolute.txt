@@ -36,3 +36,13 @@
 /Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Debug/net6.0/runtimes/win-x86/native/sni.dll
 /Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Debug/net6.0/runtimes/unix/lib/net6.0/System.Data.SqlClient.dll
 /Users/darbechar/Library/Mobile Documents/com~apple~CloudDocs/תואר ראשון - מנהל עסקים - רופין/שנה ג׳/שנה ג׳ סמסטר א׳/צד שרת/Targilim/Tar1/Tar1/Tar1/bin/Debug/net6.0/runtimes/win/lib/net6.0/System.Data.SqlClient.dll
+/Users/darbechar/Documents/GitHub/ServerSideTar4/ServerSide/Tar1/Tar1/obj/Debug/net6.0/Tar1.csproj.AssemblyReference.cache
+/Users/darbechar/Documents/GitHub/ServerSideTar4/ServerSide/Tar1/Tar1/obj/Debug/net6.0/Tar1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/darbechar/Documents/GitHub/ServerSideTar4/ServerSide/Tar1/Tar1/obj/Debug/net6.0/Tar1.AssemblyInfoInputs.cache
+/Users/darbechar/Documents/GitHub/ServerSideTar4/ServerSide/Tar1/Tar1/obj/Debug/net6.0/Tar1.AssemblyInfo.cs
+/Users/darbechar/Documents/GitHub/ServerSideTar4/ServerSide/Tar1/Tar1/obj/Debug/net6.0/Tar1.csproj.CoreCompileInputs.cache
+/Users/darbechar/Documents/GitHub/ServerSideTar4/ServerSide/Tar1/Tar1/obj/Debug/net6.0/Tar1.MvcApplicationPartsAssemblyInfo.cs
+/Users/darbechar/Documents/GitHub/ServerSideTar4/ServerSide/Tar1/Tar1/obj/Debug/net6.0/Tar1.MvcApplicationPartsAssemblyInfo.cache
+/Users/darbechar/Documents/GitHub/ServerSideTar4/ServerSide/Tar1/Tar1/obj/Debug/net6.0/Tar1.dll
+/Users/darbechar/Documents/GitHub/ServerSideTar4/ServerSide/Tar1/Tar1/obj/Debug/net6.0/refint/Tar1.dll
+/Users/darbechar/Documents/GitHub/ServerSideTar4/ServerSide/Tar1/Tar1/obj/Debug/net6.0/Tar1.pdb

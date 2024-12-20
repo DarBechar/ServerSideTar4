@@ -68,6 +68,31 @@ namespace Tar1.Controllers
 
             }
         }
+        [HttpDelete]
+        [Route("WishList/{UserId}/{MovieId}")]
+        public ActionResult RemoveFromWishList(int UserId, int MovieId)
+        {
+            try
+            {
+                int res = Tar1.BL.User.RemoveFromWishList(UserId, MovieId);
+
+                if (res == 1)
+                {
+                    return Ok("Succesfully Removed From wishList");
+                }
+
+                else
+                {
+                    return Unauthorized("Failed, movie was not Removed From wishlist");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message); // שגיאת שרת
+
+            }
+        }
 
         //USER LOGIN 
         // POST: api/User/Login
@@ -160,5 +185,7 @@ namespace Tar1.Controllers
             }
         }
     }
+
+    
 }
 

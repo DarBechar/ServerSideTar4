@@ -12,13 +12,7 @@ namespace Tar1.BL
         public string Email { get; set; }
         public string Password { get; set; }
 
-        //public User(int id, string name, string email, string pass)
-        //{
-        //    ID = id;
-        //    UserName = name;
-        //    Email = email;
-        //    Password = pass;
-        //}
+     
         public User()
         {
         }
@@ -60,6 +54,12 @@ namespace Tar1.BL
         {
             DBService dbs = new DBService();
             return dbs.AddMovie2WishList(UserId, MovieId);
+        }
+
+        public static int RemoveFromWishList(int UserId, int MovieId)
+        {
+            DBService dbs = new DBService();
+            return dbs.RemoveMovieFromWishList(UserId, MovieId);
         }
 
     }

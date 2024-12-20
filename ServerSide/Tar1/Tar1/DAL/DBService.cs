@@ -307,7 +307,7 @@ namespace Tar1.DAL
 
                 int numEff = cmd.ExecuteNonQuery();
                 return numEff;
-               
+
             }
             catch (Exception ex)
             {
@@ -348,9 +348,9 @@ namespace Tar1.DAL
             cmd = CreateCommandWithStoredProcedureGeneral("spInsertCast", con, paramDic); // create the command
 
             try
-            {              
+            {
                 int numEff = cmd.ExecuteNonQuery();
-                return numEff;             
+                return numEff;
             }
             catch (Exception ex)
             {
@@ -478,7 +478,6 @@ namespace Tar1.DAL
             }
         }
 
-
         //this function return the id of the new user 
         // id > 0 
         public int InsertUser(User newuser)
@@ -524,7 +523,6 @@ namespace Tar1.DAL
             }
         }
 
-  
         public int UserLogin(User userToLogin)
         {
             SqlConnection con;
@@ -573,7 +571,6 @@ namespace Tar1.DAL
                 }
             }
         }
-
 
         public List<Movie> GetMovie4User(int userId)
         {
@@ -659,9 +656,9 @@ namespace Tar1.DAL
             cmd = CreateCommandWithStoredProcedureGeneral("spInsertMovie2WishList", con, paramDic); // create the command
 
             try
-            {       
+            {
                 int numEff = cmd.ExecuteNonQuery();
-                return numEff;                
+                return numEff;
             }
             catch (Exception ex)
             {
@@ -677,45 +674,46 @@ namespace Tar1.DAL
             }
         }
 
-        //public int RemoveMovie2WishList(int UserId, int MovieId)
-        //{
-        //    SqlConnection con;
-        //    SqlCommand cmd;
+        public int RemoveMovieFromWishList(int UserId, int MovieId)
+        {
+            SqlConnection con;
+            SqlCommand cmd;
 
-        //    try
-        //    {
-        //        con = connect("myProjDB"); // create the connection
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        // write to log
-        //        throw (ex);
-        //    }
+            try
+            {
+                con = connect("myProjDB"); // create the connection
+            }
+            catch (Exception ex)
+            {
+                // write to log
+                throw (ex);
+            }
 
-        //    Dictionary<string, object> paramDic = new Dictionary<string, object>();
-        //    paramDic.Add("@UserId", UserId);
-        //    paramDic.Add("@MovieId", MovieId);
+            Dictionary<string, object> paramDic = new Dictionary<string, object>();
+            paramDic.Add("@UserId", UserId);
+            paramDic.Add("@MovieId", MovieId);
 
-        //    cmd = CreateCommandWithStoredProcedureGeneral("spInsertMovie2WishList", con, paramDic); // create the command
+            cmd = CreateCommandWithStoredProcedureGeneral("spInsertMovie2WishList", con, paramDic); // create the command
 
-        //    try
-        //    {
-        //        int numEff = cmd.ExecuteNonQuery();
-        //        return numEff;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw (ex);
-        //    }
+            try
+            {
+                int numEff = cmd.ExecuteNonQuery();
+                return numEff;
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
 
-        //    finally
-        //    {
-        //        if (con != null)
-        //        {
-        //            con.Close();
-        //        }
-        //    }
-        //}
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+        }
+
         public int InsertCast2CastInMovie(int castId, int movieId)
         {
             SqlConnection con;
