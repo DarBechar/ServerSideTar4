@@ -55,6 +55,14 @@ namespace Tar1.BL
 
         }
 
+        public static int Insertcast2Movie(int castId, int MovieId)
+        {
+            DBService dbs = new DBService();
+
+            return dbs.InsertCast2CastInMovie(castId, MovieId);
+
+
+        }
 
     }
 }

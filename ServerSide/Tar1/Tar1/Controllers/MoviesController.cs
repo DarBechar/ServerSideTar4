@@ -72,6 +72,13 @@ namespace Tar1
             return Movie.Insert(m);
         }
 
+        // POST api/values
+        [HttpPost("Movie/{movieId}/Cas/{CastId}")]
+        public int Post(int movieId, int CastId)
+        {
+            return Movie.Insertcast2Movie(CastId,movieId);
+        }
+
         // PUT api/values/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)

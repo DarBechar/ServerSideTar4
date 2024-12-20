@@ -676,6 +676,90 @@ namespace Tar1.DAL
                 }
             }
         }
+
+        //public int RemoveMovie2WishList(int UserId, int MovieId)
+        //{
+        //    SqlConnection con;
+        //    SqlCommand cmd;
+
+        //    try
+        //    {
+        //        con = connect("myProjDB"); // create the connection
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        // write to log
+        //        throw (ex);
+        //    }
+
+        //    Dictionary<string, object> paramDic = new Dictionary<string, object>();
+        //    paramDic.Add("@UserId", UserId);
+        //    paramDic.Add("@MovieId", MovieId);
+
+        //    cmd = CreateCommandWithStoredProcedureGeneral("spInsertMovie2WishList", con, paramDic); // create the command
+
+        //    try
+        //    {
+        //        int numEff = cmd.ExecuteNonQuery();
+        //        return numEff;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw (ex);
+        //    }
+
+        //    finally
+        //    {
+        //        if (con != null)
+        //        {
+        //            con.Close();
+        //        }
+        //    }
+        //}
+        public int InsertCast2CastInMovie(int castId, int movieId)
+        {
+            SqlConnection con;
+            SqlCommand cmd;
+
+            try
+            {
+                con = connect("myProjDB"); // create the connection
+            }
+            catch (Exception ex)
+            {
+                // write to log
+                throw (ex);
+            }
+
+            Dictionary<string, object> paramDic = new Dictionary<string, object>();
+
+            paramDic.Add("@CastId", castId);
+            paramDic.Add("@movieId", movieId);
+
+
+
+            cmd = CreateCommandWithStoredProcedureGeneral("SPInsertCastInMovie", con, paramDic); // create the command
+
+            try
+            {
+                int numEff = cmd.ExecuteNonQuery();
+                return numEff;
+            }
+            catch (Exception ex)
+            {
+                // write to log
+                throw (ex);
+            }
+
+            finally
+            {
+                if (con != null)
+                {
+                    // close the db connection
+                    con.Close();
+                }
+            }
+        }
     }
 
 }
