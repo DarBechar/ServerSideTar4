@@ -19,10 +19,10 @@ namespace Tar1.Controllers
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{MovieId}")]
+        public object GetCast4Movie(int MovieId)
         {
-            return "value";
+            return Cast.GetCast4Movie(MovieId);
         }
 
         // POST api/values

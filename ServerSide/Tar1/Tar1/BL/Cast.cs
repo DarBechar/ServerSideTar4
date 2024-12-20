@@ -31,6 +31,12 @@ namespace Tar1.BL
             return dbs.GetAllCast();
 
         }
+
+        public static object GetCast4Movie(int MovieId)
+        {
+            DBService dbs = new DBService();
+            return dbs.GetCast4Movie(MovieId);
+        }
     }
 }
 

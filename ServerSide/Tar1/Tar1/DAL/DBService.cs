@@ -47,6 +47,8 @@ namespace Tar1.DAL
             return cmd;
         }
 
+
+        //Movies
         public List<Movie> GetAllMovies()
         {
             SqlConnection con;
@@ -220,60 +222,6 @@ namespace Tar1.DAL
 
         }
 
-        public List<Cast> GetAllCast()
-        {
-            SqlConnection con;
-            SqlCommand cmd;
-            List<Cast> castList = new List<Cast>();
-            try
-            {
-                con = connect("myProjDB"); // create the connection
-            }
-            catch (Exception ex)
-            {
-                // write to log
-                throw (ex);
-            }
-
-
-
-
-            cmd = CreateCommandWithStoredProcedureGeneral("spReadCast", con, null); // create the command
-
-            try
-            {
-
-                SqlDataReader dataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-                while (dataReader.Read())
-                {
-                    Cast c = new Cast();
-                    c.ID = Convert.ToString(dataReader["Id"]);
-                    c.Name = Convert.ToString(dataReader["Name"]);
-                    c.Role = Convert.ToString(dataReader["Role"]);
-                    c.DateOfBirth = Convert.ToString(dataReader["DateOfBirth"]);
-                    c.Country = Convert.ToString(dataReader["Country"]);
-                    c.photoURL = Convert.ToString(dataReader["photoUrl"]);
-                    castList.Add(c);
-
-                }
-                return castList;
-            }
-            catch (Exception ex)
-            {
-                // write to log
-                throw (ex);
-            }
-            finally
-            {
-                if (con != null)
-                {
-                    // close the db connection
-                    con.Close();
-                }
-            }
-
-        }
-
         public int InsertMovie(Movie m)
         {
             SqlConnection con;
@@ -323,6 +271,108 @@ namespace Tar1.DAL
             }
         }
 
+        //Cast
+
+        public List<Cast> GetAllCast()
+        {
+            SqlConnection con;
+            SqlCommand cmd;
+            List<Cast> castList = new List<Cast>();
+            try
+            {
+                con = connect("myProjDB"); // create the connection
+            }
+            catch (Exception ex)
+            {
+                // write to log
+                throw (ex);
+            }
+            cmd = CreateCommandWithStoredProcedureGeneral("spReadCast", con, null); // create the command
+
+            try
+            {
+                SqlDataReader dataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dataReader.Read())
+                {
+                    Cast c = new Cast();
+                    c.ID = Convert.ToString(dataReader["Id"]);
+                    c.Name = Convert.ToString(dataReader["Name"]);
+                    c.Role = Convert.ToString(dataReader["Role"]);
+                    c.DateOfBirth = Convert.ToString(dataReader["DateOfBirth"]);
+                    c.Country = Convert.ToString(dataReader["Country"]);
+                    c.photoURL = Convert.ToString(dataReader["photoUrl"]);
+                    castList.Add(c);
+
+                }
+                return castList;
+            }
+            catch (Exception ex)
+            {
+                // write to log
+                throw (ex);
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    // close the db connection
+                    con.Close();
+                }
+            }
+
+        }
+
+        public object GetCast4Movie(int MovieId)
+        {
+            SqlConnection con;
+            SqlCommand cmd;
+            List<object> castList = new List<object>();
+            try
+            {
+                con = connect("myProjDB"); // create the connection
+            }
+            catch (Exception ex)
+            {
+                // write to log
+                throw (ex);
+            }
+
+            Dictionary<string, object> paramDic = new Dictionary<string, object>();
+            paramDic.Add("@movieId", MovieId);
+
+            cmd = CreateCommandWithStoredProcedureGeneral("SPGetCastForMovie", con, paramDic); // create the command
+
+            try
+            {
+                SqlDataReader dataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dataReader.Read())
+                {
+                    castList.Add(new
+                    {
+                        ID = Convert.ToString(dataReader["Id"]),
+                        Name = Convert.ToString(dataReader["Name"]),
+                        photoURL = Convert.ToString(dataReader["photoUrl"]),
+                        ListType = Convert.ToString(dataReader["ListType"])
+                    });
+                }
+                return castList;
+            }
+            catch (Exception ex)
+            {
+                // write to log
+                throw (ex);
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    // close the db connection
+                    con.Close();
+                }
+            }
+
+        }
+
         public int InsertCast(Cast c)
         {
             SqlConnection con;
@@ -368,7 +418,94 @@ namespace Tar1.DAL
             }
         }
 
-        //this function return the list of users
+        public int InsertCast2CastInMovie(int castId, int movieId)
+        {
+            SqlConnection con;
+            SqlCommand cmd;
+
+            try
+            {
+                con = connect("myProjDB"); // create the connection
+            }
+            catch (Exception ex)
+            {
+                // write to log
+                throw (ex);
+            }
+
+            Dictionary<string, object> paramDic = new Dictionary<string, object>();
+
+            paramDic.Add("@CastId", castId);
+            paramDic.Add("@movieId", movieId);
+
+
+
+            cmd = CreateCommandWithStoredProcedureGeneral("SPInsertCastInMovie", con, paramDic); // create the command
+
+            try
+            {
+                int numEff = cmd.ExecuteNonQuery();
+                return numEff;
+            }
+            catch (Exception ex)
+            {
+                // write to log
+                throw (ex);
+            }
+
+            finally
+            {
+                if (con != null)
+                {
+                    // close the db connection
+                    con.Close();
+                }
+            }
+        }
+
+        public int DeleteCastFromMovie(int movieId)
+        {
+            SqlConnection con;
+            SqlCommand cmd;
+
+            try
+            {
+                con = connect("myProjDB"); // create the connection
+            }
+            catch (Exception ex)
+            {
+                // write to log
+                throw (ex);
+            }
+
+            Dictionary<string, object> paramDic = new Dictionary<string, object>();
+            paramDic.Add ("@MovieID", movieId);
+         
+
+            cmd = CreateCommandWithStoredProcedureGeneral("SPClearCast4Movie", con, paramDic); // create the command
+
+            try
+            {
+                int numEff = cmd.ExecuteNonQuery();
+                return numEff;
+            }
+            catch (Exception ex)
+            {
+                // write to log
+                throw (ex);
+            }
+
+            finally
+            {
+                if (con != null)
+                {
+                    // close the db connection
+                    con.Close();
+                }
+            }
+        }
+
+        //User
         public List<User> GetAllUsers()
         {
             SqlConnection con;
@@ -421,8 +558,6 @@ namespace Tar1.DAL
                 }
             }
         }
-
-        //get a specific user
 
         public User GetUser(User userToGet)
         {
@@ -478,8 +613,6 @@ namespace Tar1.DAL
             }
         }
 
-        //this function return the id of the new user 
-        // id > 0 
         public int InsertUser(User newuser)
         {
             SqlConnection con;
@@ -521,7 +654,7 @@ namespace Tar1.DAL
                     con.Close();
                 }
             }
-        }
+        } // Register User
 
         public int UserLogin(User userToLogin)
         {
@@ -570,7 +703,7 @@ namespace Tar1.DAL
                     con.Close();
                 }
             }
-        }
+        } //User Login
 
         public List<Movie> GetMovie4User(int userId)
         {
@@ -632,7 +765,7 @@ namespace Tar1.DAL
                 }
             }
 
-        }
+        } // Gets A user's WishList
 
         public int AddMovie2WishList(int UserId, int MovieId)
         {
@@ -672,9 +805,9 @@ namespace Tar1.DAL
                     con.Close();
                 }
             }
-        }
+        }//Adds A movie to a user's WishList
 
-        public int RemoveMovieFromWishList(int UserId, int MovieId)
+        public int RemoveMovieFromWishList(int UserId, int MovieId) //Removes A movie from a user's WishList
         {
             SqlConnection con;
             SqlCommand cmd;
@@ -693,7 +826,7 @@ namespace Tar1.DAL
             paramDic.Add("@UserId", UserId);
             paramDic.Add("@MovieId", MovieId);
 
-            cmd = CreateCommandWithStoredProcedureGeneral("spInsertMovie2WishList", con, paramDic); // create the command
+            cmd = CreateCommandWithStoredProcedureGeneral("SPDeleteMovieFromWishlist", con, paramDic); // create the command
 
             try
             {
@@ -714,50 +847,6 @@ namespace Tar1.DAL
             }
         }
 
-        public int InsertCast2CastInMovie(int castId, int movieId)
-        {
-            SqlConnection con;
-            SqlCommand cmd;
-
-            try
-            {
-                con = connect("myProjDB"); // create the connection
-            }
-            catch (Exception ex)
-            {
-                // write to log
-                throw (ex);
-            }
-
-            Dictionary<string, object> paramDic = new Dictionary<string, object>();
-
-            paramDic.Add("@CastId", castId);
-            paramDic.Add("@movieId", movieId);
-
-
-
-            cmd = CreateCommandWithStoredProcedureGeneral("SPInsertCastInMovie", con, paramDic); // create the command
-
-            try
-            {
-                int numEff = cmd.ExecuteNonQuery();
-                return numEff;
-            }
-            catch (Exception ex)
-            {
-                // write to log
-                throw (ex);
-            }
-
-            finally
-            {
-                if (con != null)
-                {
-                    // close the db connection
-                    con.Close();
-                }
-            }
-        }
     }
 
 }

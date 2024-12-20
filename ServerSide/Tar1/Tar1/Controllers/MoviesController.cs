@@ -72,22 +72,34 @@ namespace Tar1
         }
 
         // POST api/values
-        [HttpPost("Movie/{movieId}/Cas/{CastId}")]
+        [HttpPost("InsertCast2Movie/{movieId}/{CastId}")] // insert cast to cast in movie table.
         public int Post(int movieId, int CastId)
         {
             return Movie.Insertcast2Movie(CastId,movieId);
         }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
+        
 
         // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("DeleteCast/{MovieId}")]
+        public IActionResult Delete(int MovieId)
         {
+            try
+            {
+                if (Movie.ClearCast(MovieId)<0)
+                {
+                    return BadRequest("Please insert Valid Movie id");
+                }
+                else
+                {
+                    return Ok("success");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message); // שגיאת שרת
+            }
         }
     }
 }

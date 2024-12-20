@@ -23,7 +23,6 @@ namespace Tar1.BL
         {
         }
 
-
         public static int Insert(Movie m)
         {
             DBService dbs = new DBService();
@@ -60,10 +59,16 @@ namespace Tar1.BL
             DBService dbs = new DBService();
 
             return dbs.InsertCast2CastInMovie(castId, MovieId);
-
-
         }
 
+        public static int ClearCast(int MovieId)
+        {
+            DBService dbs = new DBService();
+
+            return dbs.DeleteCastFromMovie(MovieId);
+          
+        }
+         
     }
 }
 

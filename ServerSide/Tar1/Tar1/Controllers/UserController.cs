@@ -78,8 +78,8 @@ namespace Tar1.Controllers
 
                 if (res == 1)
                 {
-                    return Ok("Succesfully Removed From wishList");
-                }
+                    return Ok(new { message= "Succesfully Removed From wishList"});
+                    }
 
                 else
                 {
