@@ -479,8 +479,8 @@ namespace Tar1.DAL
             }
 
             Dictionary<string, object> paramDic = new Dictionary<string, object>();
-            paramDic.Add ("@MovieID", movieId);
-         
+            paramDic.Add("@MovieID", movieId);
+
 
             cmd = CreateCommandWithStoredProcedureGeneral("SPClearCast4Movie", con, paramDic); // create the command
 
@@ -534,11 +534,12 @@ namespace Tar1.DAL
 
                 while (dataReader.Read())
                 {
-                    User NewUser = new User();
-                    NewUser.UserName = dataReader["UserName"].ToString();
-                    NewUser.Email = dataReader["Email"].ToString();
-                    NewUser.ID = Convert.ToInt32(dataReader["id"].ToString());
-                    UserList.Add(NewUser);
+                    User u = new User();
+                    u.UserName = dataReader["UserName"].ToString();
+                    u.Email = dataReader["Email"].ToString();
+                    u.ID = Convert.ToInt32(dataReader["id"].ToString());
+                    u.wishListCount = Convert.ToInt32(dataReader["wishlistCount"].ToString());
+                    UserList.Add(u);
                 }
 
                 return UserList;

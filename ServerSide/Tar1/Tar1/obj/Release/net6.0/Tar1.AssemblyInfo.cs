@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tar1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99655a2e5189c5008f69c6d50f1703ac4f75b01a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tar1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tar1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

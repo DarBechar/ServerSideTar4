@@ -15,9 +15,26 @@ namespace Tar1.Controllers
     {
         // GET: api/values
         [HttpGet]
-        public IEnumerable<User> Get()
+        public object Get()
         {
-            return Tar1.BL.User.Read();
+            try
+            {
+                object userList = Tar1.BL.User.Read();
+                if (userList == null)
+                {
+                    return BadRequest("Please insert Valid rating");
+                }
+                else
+                {
+                    return Ok(userList);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message); // שגיאת שרת
+            }
+
         }
 
         [HttpGet("wishList/{UserId}")]
@@ -151,6 +168,7 @@ namespace Tar1.Controllers
             {
                 DBService dbs = new DBService();
                 List<User> userList = dbs.GetAllUsers();
+
                 foreach (var user in userList)
                 {
                     if (user.UserName==NewUser.UserName)

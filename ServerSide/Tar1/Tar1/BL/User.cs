@@ -11,8 +11,8 @@ namespace Tar1.BL
         public string UserName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public int wishListCount { get; set; }
 
-     
         public User()
         {
         }
